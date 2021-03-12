@@ -1,0 +1,133 @@
+$colornav: coral;
+@mixin animacion {
+    animation-name: pulse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    color: white;
+}
+@mixin contenedor {
+    background-color: rgb(135, 195, 248);
+    padding: 20px;
+    border-radius: 2px;
+}
+@mixin contenedorcf {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(190, 180, 189);
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contenedor{
+    @include contenedorcf()
+
+}
+
+.contenedor > div,
+.contenedor header,
+.contenedor .contenido,
+.contenedor aside,
+.contenedor footer
+.contenedor section{
+    @include contenedor()
+}
+header{
+    background-color: blue !important;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 20px;
+}
+section{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+.contenedor .contenido{
+    grid-column: 1 / 3;
+    
+    
+}
+.contenedor aside{  
+    background-color: yellowgreen;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100px;
+    
+}
+.contenedor footer{
+    background-color: $colornav;
+    color: white;
+   grid-column: span 3;
+}
+section{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 20px;
+}
+.nav{
+    padding: 5px 10px;
+    text-decoration: none;
+    @include animacion()
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    @include animacion()
+}
+
+.nav:hover{
+    background-color: rgb(231, 111, 67);
+    
+}
+.boton{
+    padding: 10px 0;
+    border: 2px solid white;
+    display: none;
+    @include animacion()
+}
+
+
+@media (max-width: 600px) {
+    nav{
+        background-color: $colornav;
+        flex-direction: column;
+        position: absolute;
+        width: 90%;
+
+    }
+    .nav{
+        margin: 10px 0px;
+    }
+    .boton{
+        display: inline-block;
+    }
+    .desaparece{
+        display: none;
+    }
+    .contenedor aside{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .contenedor .contenido{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+  }
+  @keyframes pulse {
+    from {background-color: $colornav;}
+    to {background-color: red;}
+  }

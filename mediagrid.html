@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media formato grid</title>
+    <link rel="stylesheet" href="mediagrid.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>Titulo</h1>
+        </header>
+        <section>
+            <nav>
+                <button class="boton" onclick="accion()">Menu</button>
+                <a class="nav desaparece" href="#">Inicio</a>
+                <a class="nav desaparece" href="#">Nosotros</a>
+                <a class="nav desaparece" href="#">Contacto</a>
+                <a class="nav desaparece" href="#">RRHH</a>
+                <a class="nav desaparece" href="#">Productos</a>
+            </nav>
+        </section>
+        <div class="contenido">
+            <h1>Contenido</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, deserunt dolorem, ullam quos nesciunt perspiciatis quam expedita, enim illum exercitationem corrupti magni fugit dicta voluptatum beatae harum pariatur nostrum corporis!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum illo odio rem voluptatum hic aliquid id odit in sequi voluptates inventore deserunt voluptatibus, eaque perspiciatis, ipsam expedita, maiores facilis exercitationem?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magnam, aperiam est aspernatur tempore mollitia nihil explicabo consequuntur ipsa magni accusantium, odit obcaecati excepturi impedit iure ipsam doloribus nobis voluptates.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quasi consequuntur, numquam, cupiditate dolor vel atque ex tempora perspiciatis eligendi, nesciunt natus possimus impedit voluptate in earum quae reprehenderit asperiores?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore deleniti ipsa assumenda eos consequuntur qui a quis modi soluta accusamus at minima in, quae natus vero eligendi totam voluptates nobis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ducimus earum officiis impedit reprehenderit aliquid magnam, voluptatum aut deserunt omnis neque, ut optio id reiciendis labore quis ex? Eius, aliquid.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ab minus aliquid modi praesentium. Fugit facilis, harum pariatur impedit laudantium cupiditate accusantium veniam, accusamus a tenetur in esse ipsam officia.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate dicta sint placeat sequi dignissimos ea molestias doloribus voluptatum! Vero ex eius, optio suscipit placeat quae tempore delectus rem eos iusto?
+            </p>
+        </div>
+        <aside>
+            <h3>Sidebar</h3>
+        </aside>
+        <footer>
+            <h3>Footer</h3>
+        </footer>
+    </div>
+    <script>
+        function accion(){
+            let enlace = document.getElementsByClassName('nav');
+            for(let i = 0; i < enlace.length; i++)[
+                enlace[i].classList.toggle('desaparece')
+            ]
+        }
+    </script>
+
+</body>
+</html>
